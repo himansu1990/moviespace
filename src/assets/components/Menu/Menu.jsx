@@ -7,7 +7,7 @@ import Login from '../Login/Login'
 import SingleMovie from '../Movies/SingleMovie.jsx'
 import SearchResults from '../Search/SearchResults.jsx'
 import Contact from '../Contact/Contact.jsx'
-
+import Error from '../Error/Error.jsx'
 export default function Menu() {
   const [open, setOpen] = useState(false)
 
@@ -96,6 +96,7 @@ export default function Menu() {
 
       {/* Routes */}
       <Routes>
+        <Route path='*' element={<Error/>}/>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/movies" element={<Movies />} />
