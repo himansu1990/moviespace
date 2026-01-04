@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { singleFetch, movieCredits } from './movies'
 import Footer from '../Footer/Footer'
-
+import avatar from '/avatar-placeholder.jpg'
 export default function SingleMovie() {
   const [single, setSingle] = useState({})
   const [castDetails, setCastDetails] = useState([])
@@ -98,7 +98,7 @@ export default function SingleMovie() {
                   src={
                     item.profile_path
                       ? `https://media.themoviedb.org/t/p/w440_and_h660_face${item.profile_path}`
-                      : '/src/img/avatar-placeholder.jpg'
+                      : `${avatar}`
                   }
                   alt={item.name}
                   className="w-24 h-24 mx-auto rounded-full object-cover border border-gray-200"
